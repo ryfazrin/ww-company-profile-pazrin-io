@@ -4,18 +4,17 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* Jika Web Worker aktif, ubah type script menjadi "text/fernflow" */}
+      {/* Jika Web Worker aktif, ubah type script menjadi "text/toolwebworker" */}
       <script
         async
-        type={"text/fernflow"}
+        type="text/toolwebworker"
         src="https://platform.twitter.com/widgets.js"
-        charSet="utf-8"
       />
 
       <Script
         id="gtm"
-        type={"text/fernflow"} 
-        strategy="afterInteractive"
+        type={"text/toolwebworker"} 
+        // strategy="afterInteractive"
       >
         {`
           (function (w, d, s, l, i) {
@@ -33,8 +32,8 @@ function MyApp({ Component, pageProps }) {
 
       <Script 
         id="facebook-pixel"
-        type={"text/fernflow"} 
-        strategy="afterInteractive"
+        type={"text/toolwebworker"} 
+        // strategy="afterInteractive"
       >
         {`
           !function(f,b,e,v,n,t,s)
